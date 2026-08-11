@@ -1,5 +1,7 @@
 # atividade01
 
+RESOLUÇÃO NA BRANCH ATIVIDADE1
+
 Aplicativo mobile desenvolvido em React Native com Expo e TypeScript.
 
 ## Pré-requisitos
