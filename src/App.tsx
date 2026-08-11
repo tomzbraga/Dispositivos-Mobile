@@ -1,14 +1,14 @@
-import { ReactElement } from 'react'
-import { StyleSheet, Text } from 'react-native'
+import React, { ReactElement } from 'react'
+import { StyleSheet } from 'react-native'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
+import Main from './components/Main'
 
 export const App = (): ReactElement => {
+
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
-        <Text style={styles.emoji}>😻</Text>
-        <Text style={styles.text}>Open src/App.tsx to start working on your app!</Text>
-        <Text>Happy hacking! 🙌🏻</Text>
+        <Main />
       </SafeAreaView>
     </SafeAreaProvider>
   )
