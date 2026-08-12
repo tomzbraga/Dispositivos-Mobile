@@ -39,15 +39,35 @@ export default function Main() {
     )
   }
 
-  return (
-    <View>
-      <InputField placeholder="Digite um item" value={text} onChangeText={setText} />
-      <TouchableOpacity onPress={() => adicionarItem(text)}>
-        <Text>Adicionar</Text>
-      </TouchableOpacity>
-      {itens.map((item) => (
-        <ItemCompra onToggle={() => toggleComprado(item.id)} key={item.id} nome={item.nome} comprado={item.comprado}/>
-      ))}
-    </View>
-  );
+  function removerItem(id: number) {
+    setItens(itens.filter((item) => item.id !== id))
+  }
+  
+  const faltamComprar = itens.filter((item) => item.comprado === false).length
+
+return (
+  <View>
+    <InputField placeholder="Digite um item" value={text} onChangeText={setText} />
+    <TouchableOpacity onPress={() => adicionarItem(text)}>
+      <Text>Adicionar</Text>
+    </TouchableOpacity>
+
+    {itens.length === 0 ? (
+      <Text>Sua lista está vazia!</Text>
+    ) : (
+      <>
+        <Text>Itens faltando: {faltamComprar}</Text>
+        {itens.map((item) => (
+          <ItemCompra
+            onRemover={() => removerItem(item.id)}
+            onToggle={() => toggleComprado(item.id)}
+            key={item.id}
+            nome={item.nome}
+            comprado={item.comprado}
+          />
+        ))}
+      </>
+    )}
+  </View>
+)
 }
