@@ -6,6 +6,7 @@ import ItemCompra from "./ItemCompra";
 interface Item {
   id: number
   nome: string
+  comprado: boolean
 }
 
 export default function Main() {
@@ -24,10 +25,18 @@ export default function Main() {
     const newItem: Item = {
       id: Date.now(),
       nome,
+      comprado: false,
     }
 
     setItens([...itens, newItem])
     setText('');
+  }
+
+  function toggleComprado(id: number) {
+    setItens(itens.map((item) =>
+      item.id === id ? {...item, comprado: !item.comprado } : item
+      )
+    )
   }
 
   return (
@@ -37,7 +46,7 @@ export default function Main() {
         <Text>Adicionar</Text>
       </TouchableOpacity>
       {itens.map((item) => (
-        <ItemCompra key={item.id} nome={item.nome} />
+        <ItemCompra onToggle={() => toggleComprado(item.id)} key={item.id} nome={item.nome} comprado={item.comprado}/>
       ))}
     </View>
   );
