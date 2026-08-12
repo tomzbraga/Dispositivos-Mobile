@@ -1,20 +1,17 @@
-import React, { ReactElement, useState } from 'react'
-import { StyleSheet, Text } from 'react-native'
+import React, { ReactElement } from 'react'
+import { StyleSheet } from 'react-native'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
+import Main from './components/Main'
 
 import ItemCompra from './components/ItemCompra'
 import InputField from './components/InputField'
 
 export const App = (): ReactElement => {
-  const [text, setText] = useState('')
 
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
-        <InputField placeholder='Digite um item da lista'/>
-        <ItemCompra nome="Arroz" />
-        <ItemCompra nome="Feijão" />
-        <ItemCompra nome="Leite" />
+        <Main />
       </SafeAreaView>
     </SafeAreaProvider>
   )
