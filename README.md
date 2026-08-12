@@ -1,7 +1,5 @@
 # atividade01
 
-RESOLUÇÃO NA BRANCH ATIVIDADE1
-
 Aplicativo mobile desenvolvido em React Native com Expo e TypeScript.
 
 ## Pré-requisitos
@@ -10,7 +8,7 @@ Antes de começar, você vai precisar ter instalado:
 
 - [Node.js](https://nodejs.org/) (versão LTS)
 - [Git](https://git-scm.com/)
-- App **Expo Go** no seu celular ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent) ou [iOS](https://apps.apple.com/app/expo-go/id982107779))
+  (opcional) - App **Expo Go** no seu celular ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent) ou [iOS](https://apps.apple.com/app/expo-go/id982107779))
 
 Não é necessário ter Android Studio ou Xcode instalados para rodar o projeto em modo de desenvolvimento.
 
@@ -35,6 +33,8 @@ npm install
 npm start
 ```
 
+PARA RODAR NO NAVEGADOR É SÓ DAR O COMANDO npm run web.
+
 Isso vai abrir o Metro Bundler e exibir um QR code no terminal.
 
 ### 4. Abra o app no celular
@@ -46,17 +46,17 @@ O app vai carregar no seu celular com hot reload ativado: qualquer alteração s
 
 ## Scripts disponíveis
 
-| Comando | Descrição |
-|---|---|
-| `npm start` | Inicia o servidor de desenvolvimento (Metro Bundler) |
-| `npm run android` | Inicia o servidor e tenta abrir automaticamente em um emulador/dispositivo Android |
-| `npm run ios` | Inicia o servidor e tenta abrir automaticamente em um simulador/dispositivo iOS |
-| `npm run web` | Roda o projeto no navegador |
-| `npm run lint` | Executa a checagem de tipos (TypeScript) e o ESLint |
-| `npm run check-typescript` | Verifica erros de tipagem sem gerar arquivos |
-| `npm run check-eslint` | Executa apenas o linter |
-| `npm run prettier` | Formata o código-fonte automaticamente |
-| `npm test` | Executa os testes com Jest |
+| Comando                    | Descrição                                                                          |
+| -------------------------- | ---------------------------------------------------------------------------------- |
+| `npm start`                | Inicia o servidor de desenvolvimento (Metro Bundler)                               |
+| `npm run android`          | Inicia o servidor e tenta abrir automaticamente em um emulador/dispositivo Android |
+| `npm run ios`              | Inicia o servidor e tenta abrir automaticamente em um simulador/dispositivo iOS    |
+| `npm run web`              | Roda o projeto no navegador                                                        |
+| `npm run lint`             | Executa a checagem de tipos (TypeScript) e o ESLint                                |
+| `npm run check-typescript` | Verifica erros de tipagem sem gerar arquivos                                       |
+| `npm run check-eslint`     | Executa apenas o linter                                                            |
+| `npm run prettier`         | Formata o código-fonte automaticamente                                             |
+| `npm test`                 | Executa os testes com Jest                                                         |
 
 ## Estrutura do projeto
 
