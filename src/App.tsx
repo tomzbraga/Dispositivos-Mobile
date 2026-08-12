@@ -3,6 +3,9 @@ import { StyleSheet } from 'react-native'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
 import Main from './components/Main'
 
+import ItemCompra from './components/ItemCompra'
+import InputField from './components/InputField'
+
 export const App = (): ReactElement => {
 
   return (
